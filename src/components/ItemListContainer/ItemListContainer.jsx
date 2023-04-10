@@ -2,6 +2,8 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 
+import { useDarkModeContext } from "../../context/DarkModeContext";
+
 import { getProductos } from "../../firebase/firebase";
 
 
@@ -9,6 +11,8 @@ import { getProductos } from "../../firebase/firebase";
 const ItemListContainer = () => {
     const [productos, setProductos] = useState ([])
     const {idCategoria}= useParams()
+    const {darkMode} = useDarkModeContext()
+    console.log(darkMode)
     useEffect(() => {
         if(idCategoria){
             getProductos()
@@ -27,7 +31,6 @@ const ItemListContainer = () => {
     }, [idCategoria])
     return (
         <div className="container row d-flex justify-content-center align-items-center h-100 productosContainer">
-            <h1>Drinks</h1>
             {productos}
         </div>
     );

@@ -1,4 +1,4 @@
-import { useCarritoContext } from "../context/CarritoContext";
+import { useCarritoContext } from "../../context/CarritoContext";
 
 const ItemCart = ({item}) => {
     const {removeItem} = useCarritoContext()
@@ -6,7 +6,7 @@ const ItemCart = ({item}) => {
         <div className="card mb-3 cardCart">
         <div className="row g-0">
             <div className="col-md-3 h-25">
-                <img src={item.img} alt={`Imagen de producto ${item.nombre}`} className="img-fluid rounded-start mx-auto d-block" style={{height: "300px"}}/>
+                <img src={item.img} alt={`Imagen de producto ${item.nombre}`} className="img-fluid rounded-start mx-auto d-block imgDetalles"/>
             </div>
             <div className="col-md-9">
                 <div className="card-body bodyCart">

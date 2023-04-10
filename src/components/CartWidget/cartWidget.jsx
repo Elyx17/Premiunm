@@ -1,16 +1,18 @@
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCartShopping} from '@fortawesome/free-solid-svg-icons';
+
 import { Link } from "react-router-dom";
-import { useCarritoContext } from '../context/CarritoContext';
+import { useCarritoContext } from '../../context/CarritoContext';
+import { useDarkModeContext } from "../../context/DarkModeContext";
+
 
 
 const CartWidget = () => {
+    const {darkMode} = useDarkModeContext()
     const {getItemQuantity} = useCarritoContext()
     return (
         <>
             <Link className="nav-link" to={'/cart'}>
-                <i class="bi bi-cart" style={{fontSize: '20px', stroke: ''}}></i>
-                {getItemQuantity() > 0 && <span className="cantCarrito" style={{color: '#414141'}}>{getItemQuantity()}</span>}
+                <i className={`bi bi-cart cartWidget ${darkMode ? 'darkModeText' : 'lightMode'}`}></i>
+                {getItemQuantity() > 0 && <span className="cantCarrito">{getItemQuantity()}</span>}
             </Link> 
         </>
     );

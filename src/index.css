@@ -6,13 +6,16 @@ body {
 
 body::-webkit-scrollbar{
   width: 10px;
-  background-color: #df0b0bcc;
+  background-color: #fff;
+  z-index: -1;
 }
 
 body::-webkit-scrollbar-thumb {
   background: black;
   border-radius: 99em;
-  border: 16px solid #7d3868d9;
+  border: 16px solid #414141;
+  z-index: -1;
+
 }
 
 /* ESTILOS GENERALES */

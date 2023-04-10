@@ -14,7 +14,8 @@ import Footer from './Footer/Footer';
 import Cart from './Cart/Cart';
 import Checkout from './Checkout/Checkout';
 
-import { CarritoProvider } from './context/CarritoContext';
+import { CarritoProvider } from '../context/CarritoContext';
+import { DarkModeProvider } from '../context/DarkModeContext';
 
 
 
@@ -25,10 +26,9 @@ function App() {
   return (
     <>
 
-    <BrowserRouter>
-
-      <CarritoProvider>
-        
+  <BrowserRouter>
+    <DarkModeProvider>
+    <CarritoProvider> 
         <NavBar/>
           <Routes>
             <Route path='/' element={<ItemListContainer/>}/> 
@@ -37,13 +37,12 @@ function App() {
             <Route path='/Contacto' element={<Contacto/>}/> 
             <Route path='/Cart' element={<Cart/>}/>
             <Route path='/Checkout' element={<Checkout/>}/>
-        </Routes> 
+          </Routes> 
       <Footer/>
-      <ToastContainer/>
-      
-      </CarritoProvider>
-
-    </BrowserRouter>
+      <ToastContainer/> 
+    </CarritoProvider>
+    </DarkModeProvider>
+  </BrowserRouter>
     </>
   );
 }

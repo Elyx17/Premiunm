@@ -2,7 +2,7 @@ import ItemCount from "../ItemCount/ItemCount";
 import { toast } from 'react-toastify';
 
 
-import { useCarritoContext } from "../context/CarritoContext";
+import { useCarritoContext } from "../../context/CarritoContext";
 import { Link } from "react-router-dom";
 
 const ItemDetail = ({item}) => {
@@ -26,7 +26,7 @@ const ItemDetail = ({item}) => {
         
         <div className="row g-0">
             <div className="col-md-6">
-            <img src={item.img} className="img-fluid rounded-start" alt={`Imagen de ${item.nombre}`} />
+            <img src={item.img} className="imgDetail" alt={`Imagen de ${item.nombre}`} />
             </div>
             <div className="col-md-3">
             <div className="card-body mt-5 detallesNames">
