@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div className="footer-basic">
         <footer>
-            <ul className={`list-inline ${darkMode ? 'darkModeText' : 'lightMode'}`}>
+            <ul className={`list-inline footerMobile ${darkMode ? 'darkModeText' : 'lightMode'}`}>
                 <li class="list-inline-item"><Link className='nav-link' to={'/'}>Inicio</Link></li>
                 <li class="list-inline-item"><Link className='nav-link' to={'/'}>Productos</Link></li>
                 <li class="list-inline-item"><Link className='nav-link' to={'https://goo.gl/maps/HSZDkewH9M6BQ8Uw5'} target="_blank">Direccion</Link></li>

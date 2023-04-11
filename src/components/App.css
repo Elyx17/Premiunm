@@ -1,7 +1,9 @@
 /* ESTILOS DE CLASES Y ID */
+
 body{
     background-color: whitesmoke;
     color: #414141;
+    height: 100vh;
 }
 
 .productosContainer{
@@ -192,7 +194,7 @@ to {
 .footer-basic {
     padding:40px 0;
     color: #414141;
-    margin: 6rem;
+    margin-top: 6rem;
   }
   
   .footer-basic ul {
@@ -310,7 +312,6 @@ to {
 
 .detallesButtons{
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -340,6 +341,10 @@ to {
     max-height: 400px;
     object-fit: contain;
     margin-left: 100px;
+}
+
+.itemDetail{
+    background-color: rgb(220, 220, 220, .6);
 }
 
 .darkMode{
@@ -375,4 +380,33 @@ to {
 
 .lightModeText li a{
     color: #000;
+}
+
+.buttonsDetail{
+    background-color: rgb(220, 220, 220, .6);
+    border: 1px solid #313131;
+    color: #313131;
+    margin-bottom: 15px;
+}
+
+.buttonsSpecific{
+    margin-bottom: -15px;
+}
+
+@media (max-width:768px)  {
+
+    .mobile{
+        display: flex;
+        justify-content: center;
+    }
+    .footerMobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    }
+    .copyright{
+        margin: 0 30px;
+    }
 }

@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import ItemList  from "../ItemList/ItemList"
 import { useCarritoContext } from '../../context/CarritoContext';
+import { useDarkModeContext } from "../../context/DarkModeContext";
+
 
 const Cart = () => {
+    const {darkMode} = useDarkModeContext()
+
 
     const {carrito, totalPrice, emptyCart } = useCarritoContext()
     return (
@@ -20,7 +24,7 @@ const Cart = () => {
                     <ItemList products={carrito} plantilla={'itemCart'}/>
                 }
                 <div className="divButtons">
-                    <p>Total de la compra: $ {new Intl.NumberFormat('de-DE').format(totalPrice())}</p>
+                    <p className={`${darkMode ? 'darkModeText' : 'ligthMode'}`}>Total de la compra: $ {new Intl.NumberFormat('de-DE').format(totalPrice())}</p>
                     <div className='actionButtons'>
                     <Link className="nav-link" to={'/'}><button className="btn btn-dark"><i class="bi bi-arrow-return-left"></i> Continuar Comprando</button></Link> 
                     <button className="btn btn-danger"><i class="bi bi-trash3"></i> Vaciar carrito</button>

@@ -12,7 +12,7 @@ const CartWidget = () => {
         <>
             <Link className="nav-link" to={'/cart'}>
                 <i className={`bi bi-cart cartWidget ${darkMode ? 'darkModeText' : 'lightMode'}`}></i>
-                {getItemQuantity() > 0 && <span className="cantCarrito">{getItemQuantity()}</span>}
+                {getItemQuantity() > 0 && <span className={`cantCarrito ${darkMode ? 'darkModeText' : 'ligthMode'}`}>{getItemQuantity()}</span>}
             </Link> 
         </>
     );

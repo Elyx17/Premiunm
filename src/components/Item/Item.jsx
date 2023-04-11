@@ -9,7 +9,7 @@ const Item = ({item}) => {
   const {darkMode} = useDarkModeContext()
 
     return (
-  <div className='col-md-3 p-'>
+  <div className='col-md-3 mobile'>
   <div className={`card text-center glassBox ${darkMode ? 'darkMode' : 'ligthMode'}`}>
       <div className="overflow glassBox__imgBox">
       <Link className="nav-link" to={`/item/${item.id}`}><img src={item.img} alt={`Imagen de ${item.nombre}`} className="card-img-top cardImagen" /></Link>
