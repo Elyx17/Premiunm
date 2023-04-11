@@ -416,4 +416,18 @@ to {
     .imgDetail{
         margin-left: 0px;
     }
+    .container{
+        max-width: 768px;
+    }
+    .cardCart{
+        max-height: none;
+    }
+    .divButtons{
+        flex-direction: column;
+    }
+
+    .buttonDelete{
+        padding: 5px;
+        width: 7%;
+    }
 }

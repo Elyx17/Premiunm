@@ -19,7 +19,7 @@ const ItemCart = ({item}) => {
                     <p className="card-text">Cantidad: {item.cant}</p>
                     <p className="card-text">Precio Unitario: $ {new Intl.NumberFormat('de-DE').format(item.precio)}</p>
                     <p className="card-text">Subtotal: $ {new Intl.NumberFormat('de-DE').format(item.precio * item.cant)}</p>
-                    <button className="btn btn-danger" onClick={() => removeItem(item.id)}><i class="bi bi-x-lg iconoDeBorrar"></i></button>
+                    <button className="btn btn-danger buttonDelete" onClick={() => removeItem(item.id)}><i class="bi bi-x-lg iconoDeBorrar"></i></button>
                 </div>
             </div>
         </div>
