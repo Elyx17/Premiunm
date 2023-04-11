@@ -409,4 +409,11 @@ to {
     .copyright{
         margin: 0 30px;
     }
+    .detallesButtons{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .imgDetail{
+        margin-left: 0px;
+    }
 }
