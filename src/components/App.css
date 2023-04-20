@@ -272,6 +272,7 @@ to {
 
 .bodyCart {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -306,6 +307,7 @@ to {
 
 .actionButtons{
     display: flex;
+    flex-wrap: wrap;
     z-index: 2;
 }
 
@@ -428,6 +430,6 @@ to {
 
     .buttonDelete{
         padding: 5px;
-        width: 7%;
+        width: 100%;
     }
 }
